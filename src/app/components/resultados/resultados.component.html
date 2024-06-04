@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Resultados de la Votación</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Candidato</th>
+                <th>Votos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of candidatos">
+                <td>{{c.name}}</td>
+                <td>{{c.votes}}</td>
+            </tr>
+        </tbody>
+    </table>
+   </div>
+   

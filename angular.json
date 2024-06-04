@@ -35,6 +35,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootswatch/dist/cyborg/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -68,17 +70,9 @@
           },
           "defaultConfiguration": "production"
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "presa_angulo_edurne_DWEC_1F:build:production"
-            },
-            "development": {
-              "buildTarget": "presa_angulo_edurne_DWEC_1F:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
+        "serve": { 
+          "builder": "@angular-devkit/build-angular:dev-server", 
+          "options": { "proxyConfig": "src/proxy.conf.json" } 
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -106,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

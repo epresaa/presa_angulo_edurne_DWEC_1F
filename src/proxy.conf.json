@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "http://laravel-votos.dev",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
